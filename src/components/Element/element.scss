@@ -1,0 +1,27 @@
+.element {
+  display: flex;
+  width: 150px;
+  border: 2px solid black;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+
+  &-close {
+    background-color: red;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    border-left: 2px solid black;
+  }
+
+  &-clickable {
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  &-nonclickable {
+    padding: 10px;
+  }
+}

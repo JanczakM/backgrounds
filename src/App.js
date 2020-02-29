@@ -1,26 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Element from './components/Element/Element';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+function createArr(){
+  const arr = [];
+  for(let i=1; i<101; i++){
+    arr.push(i);
+  }
+  return arr;
+}
+
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      elemsArr: createArr(),
+    };
+  }
+
+  render() {
+    return (
+      <div className="app-template">
+        {this.state.elemsArr.map(elem => {
+          return <Element key={elem} clickable={elem % 3 === 0 ? true : false}></Element>
+        })}
+      </div>
+    );
+  }
 }
 
 export default App;

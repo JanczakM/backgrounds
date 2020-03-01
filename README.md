@@ -1,3 +1,5 @@
+This is simple app, that shows 100 elements. Every third changes its background to random color on click. You can also hide elements on x click.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
